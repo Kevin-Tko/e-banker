@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>E-Bank</title>
+        <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <section class="login-container">
+            <div class="login-box">
+                <h1 class="heading-primary login-text">Login to get started</h1>
+                <img src="logo.png" alt="icon" class="bankist-icon" />
+                <div class="input-el-box">
+                    <input
+                        type="text"
+                        name=""
+                        id="login-name"
+                        class="input-el"
+                        placeholder="user"
+                    />
+                    <input
+                        type="number"
+                        name=""
+                        id="login-pin"
+                        class="input-el"
+                        placeholder="PIN"
+                    />
+                    <ion-icon
+                        size="large"
+                        name="arrow-forward-outline"
+                        id="login-btn"
+                    ></ion-icon>
+                </div>
+            </div>
+        </section>
+
+        <section class="register">
+            <div class="acc-registration">
+                <div class="register-text">
+                    <h2 class="heading-secondary">Register Account</h2>
+                </div>
+                <form method="post" class="register-form-el">
+                    <div class="register-input-el-box">
+                        <label for="firstname" class="service-label"
+                            >firstname</label
+                        >
+                        <input
+                            type="text"
+                            name="firstname"
+                            class="register-input-el input-el"
+                            id="firstname"
+                            required
+                        />
+                    </div>
+                    <div class="register-input-el-box">
+                        <label for="lastname" class="service-label"
+                            >lastname</label
+                        >
+                        <input
+                            type="text"
+                            name="lastname"
+                            class="register-input-el input-el"
+                            id="lastname"
+                            required
+                        />
+                    </div>
+                    <div class="register-input-el-box">
+                        <label for="pin" class="service-label">pin</label>
+                        <input
+                            type="number"
+                            name="pin"
+                            class="register-input-el input-el"
+                            id="set-pin"
+                            required
+                        />
+                    </div>
+                    <div class="register-input-el-box">
+                        <label for="selectcurrency" class="service-label"
+                            >select currency</label
+                        >
+                        <select
+                            name="selectcurrency"
+                            id="selected-curr"
+                            class="selection"
+                            required
+                        >
+                            <option value="" selected>select</option>
+                            <option value="EUR">EUR</option>
+                        </select>
+                    </div>
+                    <div class="register-input-el-box">
+                        <label for="selectcountry" class="service-label"
+                            >select country</label
+                        >
+                        <select
+                            name="selectcountry"
+                            id="selected-country"
+                            class="selection"
+                            required
+                        >
+                            <option value="" selected>select</option>
+                            <option value="de-DE">de-DE</option>
+                        </select>
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn btn-register"
+                        id="button-register"
+                    >
+                        register
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section class="details-container">
+            <div class="balance">
+                <div class="balance-text">
+                    <h2 class="heading-secondary u-margin-bottom-sm">
+                        Current balance
+                    </h2>
+                    <p class="date-today">
+                        As of <span class="date">2024/08/17</span>,
+                        <span class="time">10:36</span>
+                    </p>
+                </div>
+                <div class="balance-amount-box">
+                    <h1 class="balance-amount heading-primary">
+                        <span class="balance-amt">34000</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="account-details-box grid-3-cols">
+                <div class="transactions-details">
+                    <div class="transaction">
+                        <div class="trn">
+                            <p class="trn-details trn-details-deposit">
+                                <span class="trn-count">8</span>Deposit
+                            </p>
+                            <p class="trn-date">17/8/2024</p>
+                        </div>
+                        <p class="trn-amount">
+                            <span class="amount">1200</span>
+                        </p>
+                    </div>
+                    <div class="transaction">
+                        <div class="trn">
+                            <p class="trn-details trn-details-withdrawal">
+                                <span class="trn-count">8</span>withdrawal
+                            </p>
+                            <p class="trn-date">17/8/2024</p>
+                        </div>
+                        <p class="trn-amount">
+                            <span class="amount">1200</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="account-services">
+                    <div class="service">
+                        <div class="service-box service-box-transfer">
+                            <p class="service-paragraph">Transfer money</p>
+                            <div class="service-inputs-box">
+                                <div class="input-box">
+                                    <input
+                                        type="text"
+                                        name="bank"
+                                        class="bank-code transfer-input input-el"
+                                    />
+                                    <label for="bank" class="service-label"
+                                        >Transfer to</label
+                                    >
+                                </div>
+                                <div class="input-box">
+                                    <input
+                                        type="number"
+                                        name="transfer-amount"
+                                        class="transfer-amount transfer-input input-el"
+                                    />
+                                    <label
+                                        for="transfer-amount"
+                                        class="service-label"
+                                        >Amount</label
+                                    >
+                                </div>
+                                <button type="submit" class="btn transfer-btn">
+                                    <ion-icon
+                                        name="arrow-forward-outline"
+                                    ></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="service-box service-box-loan">
+                            <p class="service-paragraph">Request loan</p>
+                            <div class="service-inputs-box">
+                                <div class="input-box">
+                                    <input
+                                        type="number"
+                                        name="amount"
+                                        class="loan-amount transfer-input input-el"
+                                    />
+                                    <label for="amount" class="service-label"
+                                        >Amount</label
+                                    >
+                                </div>
+                                <button type="submit" class="btn btn-loan">
+                                    <ion-icon
+                                        name="arrow-forward-outline"
+                                    ></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="service-box service-box-close">
+                            <p class="service-paragraph">Close account</p>
+                            <div class="service-inputs-box">
+                                <div class="input-box">
+                                    <input
+                                        type="text"
+                                        name="close"
+                                        class="close-acc transfer-input input-el"
+                                    />
+                                    <label for="close" class="service-label"
+                                        >Confirm Customer</label
+                                    >
+                                </div>
+                                <div class="input-box">
+                                    <input
+                                        type="number"
+                                        name="pin"
+                                        class="close-user-pin transfer-input input-el"
+                                    />
+                                    <label for="pin" class="service-label"
+                                        >Confirm Pin</label
+                                    >
+                                </div>
+                                <button type="submit" class="btn btn-close-acc">
+                                    <ion-icon
+                                        name="arrow-forward-outline"
+                                    ></ion-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary-box">
+                <div class="summary-box-container">
+                    <div class="money money-in-box">
+                        <p class="summary-text">in</p>
+                        <p class="summary-amt summary-amt-in">
+                            <span class="amt amt-in">35000</span>
+                        </p>
+                    </div>
+                    <div class="money money-out-box">
+                        <p class="summary-text">out</p>
+                        <p class="summary-amt summary-amt-out">
+                            <span class="amt amt-out">35000</span>
+                        </p>
+                    </div>
+                    <div class="money intetest-box">
+                        <p class="summary-text">interest</p>
+                        <p class="summary-amt interest-amt">
+                            <span class="amt amt-int">35000</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="summary-text sort">&darr;sort</p>
+                    </div>
+                </div>
+                <div class="logout-timer">
+                    <p class="logout-timer-text">
+                        You will be logged out in
+                        <span class="timer">03:30</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+    </body>
+</html>

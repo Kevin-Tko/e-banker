@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    color: #343a40;
+    background-color: #dee2e6;
+}
+
+.heading-primary {
+    font-size: 2.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+}
+
+.heading-secondary {
+    font-size: 3.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.input-el {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 10rem;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.input-el:focus {
+    outline: 1px solid #868e96;
+    transform: scale(0.9);
+}
+
+.input-el::placeholder {
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+    text-transform: lowercase;
+}
+
+.grid-3-cols {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2.4rem;
+}
+
+.u-margin-bottom-sm {
+    margin-bottom: 1rem;
+}
+
+/* Login area CSS */
+
+.login-container {
+    width: 100vw;
+}
+
+.login-box {
+    width: 100%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bankist-icon {
+    display: inline-block;
+    height: 5rem;
+}
+
+.input-el-box {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+    font-weight: 700;
+}
+
+ion-icon {
+    cursor: pointer;
+}
+
+/* Accout details section */
+.details-container {
+    width: 110rem;
+    /* background-color: antiquewhite; */
+    margin: 0 auto;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-bottom: 1rem;
+    /* opacity: 0; */
+    display: none;
+    transition: all 0.5s;
+}
+
+.balance {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance-amount {
+    font-size: 4.8rem;
+}
+
+.date-today {
+    font-size: 1.6rem;
+    color: #868e96;
+}
+
+.transactions-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem;
+    height: 45rem;
+    background-color: #f1f3f5;
+    border-radius: 1.1rem;
+    overflow: scroll;
+}
+
+.transaction {
+    padding: 2rem;
+    background-color: #e9ecef;
+    border-radius: 1.1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.trn-details,
+.trn-date {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.trn-details-deposit,
+.trn-details-withdrawal {
+    text-transform: uppercase;
+    background-image: linear-gradient(to right bottom, #8ce99a, #37b24d);
+    padding: 0.2rem 0.5rem;
+    border-radius: 10rem;
+}
+
+.trn-details-withdrawal {
+    background-image: linear-gradient(to right bottom, #ffa8a8, #f03e3e);
+}
+
+.trn-details > span {
+    margin-right: 0.5rem;
+}
+
+.trn-amount {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.service-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding: 2rem;
+    border-radius: 1.1rem;
+}
+
+.service-box-transfer {
+    background-image: linear-gradient(to right bottom, #ffe066, #f59f00);
+}
+
+.service-box-loan {
+    background-image: linear-gradient(to right bottom, #8ce99a, #37b24d);
+}
+
+.service-box-close {
+    background-image: linear-gradient(to right bottom, #ffa8a8, #f03e3e);
+}
+
+.service-inputs-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1.6rem;
+}
+
+.input-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.service-paragraph {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.transfer-input {
+    border-radius: 1.1rem;
+    width: 14rem;
+    background-color: rgba(246, 246, 246, 0.7);
+}
+.service-label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.btn {
+    display: block;
+    width: 6rem;
+    height: 3rem;
+    border: none;
+    border-radius: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn > ion-icon {
+    font-size: 2rem;
+}
+
+/* Summarry CSS */
+.summary-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.summary-box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+}
+.money {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+    align-self: flex-end;
+}
+.summary-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 0.5rem;
+}
+.summary-amt {
+    font-size: 2rem;
+    font-weight: 700;
+    background-clip: text;
+    color: transparent;
+}
+
+.summary-amt-in,
+.interest-amt {
+    background-image: linear-gradient(to right bottom, #8ce99a, #37b24d);
+}
+
+.summary-amt-out {
+    background-image: linear-gradient(to right bottom, #ffa8a8, #f03e3e);
+}
+
+.logout-timer {
+    align-self: flex-end;
+    justify-self: end;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.timer {
+    font-weight: 800;
+}
+
+.sort {
+    cursor: pointer;
+}
+
+/* Account registration */
+.register {
+    padding-bottom: 2rem;
+}
+.acc-registration {
+    background-color: inherit;
+    width: 40rem;
+    margin: 0 auto;
+    padding: 2rem 4rem;
+    border-radius: 1.1rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.register-form-el {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.register-input-el-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.register-input-el {
+    border-radius: 0.2rem;
+    text-align: left;
+    padding-left: 0.2rem;
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+.register-input-el:focus {
+    transform: scale(1);
+}
+
+.selection {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    border-radius: 0.2rem;
+    text-align: left;
+    padding-left: 0.2rem;
+    opacity: 0.7;
+    transition: all 0.4s;
+}
+
+.selection :focus {
+    /* outline: 1px solid #868e96; */
+    outline: none;
+}
+
+.selection ::placeholder {
+    font-weight: 700;
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+    text-transform: lowercase;
+}
+
+.btn-register {
+    width: 60%;
+    margin: 0 auto;
+    background-image: linear-gradient(to right bottom, #8ce99a, #37b24d);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: all 0.4s;
+}
+
+.btn-register:hover {
+    transform: scale(1.1);
+}
